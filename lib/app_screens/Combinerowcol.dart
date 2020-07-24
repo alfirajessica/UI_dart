@@ -57,7 +57,8 @@ class Combinerowcol extends StatelessWidget {
                 ),
               ],
             ),
-            Imageshow()
+            Imageshow(), //call class Imageshow
+            Buttonbook()
           ],
         ),
       ),
@@ -76,4 +77,33 @@ class Imageshow extends StatelessWidget {
     );
     return Container(child: image);
   }
+}
+
+class Buttonbook extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: RaisedButton(
+        color: Colors.deepOrange,
+        child: Text("Book Your Flight"),
+        elevation: 6.0,
+        onPressed: () {
+          bookFlight(context);
+        },
+      ),
+    );
+  }
+}
+
+void bookFlight(BuildContext context) {
+  var alertDialog = AlertDialog(
+    title: Text('Flight booked successfully'),
+    content: Text('ini isi konten'),
+  );
+
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alertDialog;
+      });
 }
