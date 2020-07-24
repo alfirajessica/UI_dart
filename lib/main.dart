@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_dart/app_screens/Firstscreen.dart';
 import 'package:ui_dart/app_screens/Rowscreen.dart';
 import 'package:ui_dart/app_screens/Columnscreen.dart';
+import 'package:ui_dart/app_screens/Combinerowcol.dart';
 
 void main() {
   runApp(MyFlutterApp());
@@ -48,7 +49,7 @@ class MyFlutterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, //menghilangkan banner debug
       title: 'My Flutter App',
       home: Scaffold(
-        body: Columnscreen(), //isi,
+        body: Combinerowcol(), //isi,
       ),
     );
   }
