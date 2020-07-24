@@ -57,9 +57,23 @@ class Combinerowcol extends StatelessWidget {
                 ),
               ],
             ),
+            Imageshow()
           ],
         ),
       ),
     );
+  }
+}
+
+class Imageshow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage("images/back.jpg");
+    Image image = Image(
+      image: assetImage,
+      width: 250,
+      height: 250,
+    );
+    return Container(child: image);
   }
 }
