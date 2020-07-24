@@ -10,7 +10,8 @@ class Combinerowcol extends StatelessWidget {
         title: Text('Learn Combine Row and Column'),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 10, top: 30),
+        padding: EdgeInsets.all(30),
+        margin: EdgeInsets.all(30),
         child: Column(
           children: <Widget>[
             Row(
