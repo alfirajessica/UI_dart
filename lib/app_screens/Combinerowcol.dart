@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_dart/app_screens/Listview.dart';
 
 //-------------------Column------------------------------
 class Combinerowcol extends StatelessWidget {
@@ -86,7 +87,7 @@ class Buttonbook extends StatelessWidget {
     return Container(
       child: RaisedButton(
         color: Colors.deepOrange,
-        child: Text("Book Your Flight"),
+        child: Text("Listview custom"),
         elevation: 6.0,
         onPressed: () {
           //bookFlight(context); //call alertdialog
@@ -94,7 +95,7 @@ class Buttonbook extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => Detailflight(),
+                builder: (context) => Listview(),
               ));
         },
       ),
