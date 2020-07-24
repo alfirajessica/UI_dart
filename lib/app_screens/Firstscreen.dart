@@ -23,6 +23,7 @@ import 'package:flutter/material.dart';
 }*/
 //-------------------END OF UI DART ------------------------------
 
+//------------------LOGIC LUCKY NUMBER------------------------------
 class Firstscreen extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -34,9 +35,11 @@ class Firstscreen extends StatelessWidget {
             'Your lucky number is = ${generatenumberlucky()}',
             textDirection: TextDirection.ltr,
             style: TextStyle(
-              color: Colors.black,
-              fontSize: 20.0,
-            ),
+                decoration: TextDecoration.none,
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontStyle: FontStyle.italic,
+                fontFamily: 'Raleway'),
           ),
         ));
   }
@@ -47,3 +50,4 @@ int generatenumberlucky() {
   int luckynum = rand.nextInt(10);
   return luckynum;
 }
+//---------------END OF LOGIC LUCKY NUMBER------------------------------
