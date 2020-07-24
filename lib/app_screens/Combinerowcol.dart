@@ -79,6 +79,7 @@ class Imageshow extends StatelessWidget {
   }
 }
 
+//----------- button ---------------------
 class Buttonbook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,13 +89,42 @@ class Buttonbook extends StatelessWidget {
         child: Text("Book Your Flight"),
         elevation: 6.0,
         onPressed: () {
-          bookFlight(context);
+          //bookFlight(context); //call alertdialog
+          // pindah ke halaman lain
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Detailflight(),
+              ));
         },
       ),
     );
   }
 }
 
+class Detailflight extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Detail Penerbangan'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          color: Colors.deepOrange,
+          child: Text("Back to halaman depan"),
+          elevation: 6.0,
+          onPressed: () {
+            //balik ke halaman sebelumnya
+            Navigator.pop(context);
+          },
+        ),
+      ),
+    );
+  }
+}
+
+//---------- show alert ---------------
 void bookFlight(BuildContext context) {
   var alertDialog = AlertDialog(
     title: Text('Flight booked successfully'),
@@ -107,3 +137,5 @@ void bookFlight(BuildContext context) {
         return alertDialog;
       });
 }
+
+//----------- navigate to other page ---------------
