@@ -16,25 +16,44 @@ class Combinerowcol extends StatelessWidget {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(color: Colors.red),
-                  child: Text("Batik Air"),
+                Expanded(
+                  child: Text("Batik Air",
+                      textDirection: TextDirection.ltr,
+                      style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontFamily: 'Raleway',
+                          fontSize: 20.0,
+                          fontStyle: FontStyle.italic)),
                 ),
-                Container(
-                  decoration: BoxDecoration(color: Colors.green),
-                  child: Text('column 2'),
-                ),
+                Expanded(
+                    child: Text("Dari Makassar to Surabaya ",
+                        textDirection: TextDirection.ltr,
+                        style: TextStyle(
+                            decoration: TextDecoration.none,
+                            fontFamily: 'Raleway',
+                            fontSize: 20.0,
+                            fontStyle: FontStyle.italic))),
               ],
             ),
             Row(
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(color: Colors.red),
-                  child: Text("Garuda Air"),
+                Expanded(
+                  child: Text("Garuda Air",
+                      textDirection: TextDirection.ltr,
+                      style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontFamily: 'Raleway',
+                          fontSize: 20.0,
+                          fontStyle: FontStyle.italic)),
                 ),
-                Container(
-                  decoration: BoxDecoration(color: Colors.green),
-                  child: Text('column 2'),
+                Expanded(
+                  child: Text('Dari Batam to Surabaya ',
+                      textDirection: TextDirection.ltr,
+                      style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontFamily: 'Raleway',
+                          fontSize: 20.0,
+                          fontStyle: FontStyle.italic)),
                 ),
               ],
             ),
