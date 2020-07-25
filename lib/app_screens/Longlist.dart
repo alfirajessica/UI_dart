@@ -10,7 +10,12 @@ class Longlist extends StatelessWidget {
         appBar: AppBar(
           title: Text('Longlist'),
         ),
-        body: GetLonglist());
+        body: GetLonglist(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.add),
+          tooltip: "Add one more",
+        ));
   }
 
   List<String> getlistnum() {
