@@ -24,6 +24,9 @@ class YourAddress extends StatefulWidget {
 class _YourAddress extends State<StatefulWidget> {
   String namaKota, namaProvinsi = "";
 
+  var _jalan = ["Bratang", "Ngagel", "Gubeng", "Kertajaya"];
+  var _jalanItemselected = "Bratang";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +49,22 @@ class _YourAddress extends State<StatefulWidget> {
                 });
               },
             ),
-            Text("Kota tinggal = $namaKota, Provinsi tinggal = $namaProvinsi"),
+            DropdownButton<String>(
+              items: _jalan.map((String dropdownstringitem) {
+                return DropdownMenuItem<String>(
+                  value: dropdownstringitem,
+                  child: Text(dropdownstringitem),
+                );
+              }).toList(),
+              onChanged: (String newValueSelected) {
+                setState(() {
+                  this._jalanItemselected = newValueSelected;
+                });
+              },
+              value: _jalanItemselected,
+            ),
+            Text(
+                "Kota tinggal = $namaKota, Provinsi tinggal = $namaProvinsi, jalan = $_jalanItemselected")
           ],
         ),
       ),
