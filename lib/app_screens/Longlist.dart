@@ -23,7 +23,8 @@ class Longlist extends StatelessWidget {
     return items;
   }
 
-  Widget GetLonglist() {
+  //------------- long list with alert dialog ----------------
+  /*Widget GetLonglist() {
     var listnums = getlistnum();
     var listview = ListView.builder(
       itemBuilder: (context, index) {
@@ -46,6 +47,36 @@ class Longlist extends StatelessWidget {
     );
     return listview;
   }
-}
+}*/
+//-------------------END OF long list with alert dialog------------------------------
 
-//-------------------END OF long list ------------------------------
+//------------- long list without alert dialog ----------------
+  Widget GetLonglist() {
+    var listnums = getlistnum();
+    var listview = ListView.builder(
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: Icon(Icons.album),
+          title: Text(listnums[index]),
+          onTap: () {
+            showSnackBar(context, listnums[index]);
+          },
+        );
+      },
+    );
+    return listview;
+  }
+}
+//-------------------END OF long list without alert dialog------------------------------
+
+void showSnackBar(BuildContext context, String item) {
+  var snackBar = SnackBar(
+    content: Text("You just tapped - $item"),
+    action: SnackBarAction(
+        label: "undo",
+        onPressed: () {
+          debugPrint("undo - $item action");
+        }),
+  );
+  Scaffold.of(context).showSnackBar(snackBar);
+}
