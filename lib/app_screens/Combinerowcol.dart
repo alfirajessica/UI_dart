@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_dart/app_screens/Listview.dart';
 import 'package:ui_dart/app_screens/Longlist.dart';
+import 'package:ui_dart/app_screens/Statefulwidget.dart';
 
 //-------------------Column------------------------------
 class Combinerowcol extends StatelessWidget {
@@ -113,6 +114,20 @@ class Buttonbook extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => Longlist(),
+                ));
+          },
+        ),
+        RaisedButton(
+          color: Colors.amberAccent,
+          child: Text("Statefull widget/input-output"),
+          elevation: 6.0,
+          onPressed: () {
+            //bookFlight(context); //call alertdialog
+            // pindah ke halaman Longlist.dart
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Statefulwidget(),
                 ));
           },
         ),
