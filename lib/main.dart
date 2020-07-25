@@ -58,19 +58,22 @@ class MyFlutterApp extends StatelessWidget {
 }
 ------ end of combine row and column ----------*/
 
-/*--------calculator -----------*/
+/*--------calculator  and theme-----------*/
 class MyFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //menghilangkan banner debug
+        debugShowCheckedModeBanner: false, //menghilangkan banner debug
 
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Calculator app'), //title pada appbar
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Calculator app'), //title pada appbar
+          ),
+          body: Calculator(), //isi,
         ),
-        body: Calculator(), //isi,
-      ),
-    );
+        theme: ThemeData(
+            brightness: Brightness.dark,
+            primaryColor: Colors.indigo,
+            accentColor: Colors.indigoAccent));
   }
 }
