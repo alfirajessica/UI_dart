@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_dart/app_screens/Listview.dart';
+import 'package:ui_dart/app_screens/Longlist.dart';
 
 //-------------------Column------------------------------
 class Combinerowcol extends StatelessWidget {
@@ -85,21 +86,38 @@ class Buttonbook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: RaisedButton(
-        color: Colors.deepOrange,
-        child: Text("Listview custom"),
-        elevation: 6.0,
-        onPressed: () {
-          //bookFlight(context); //call alertdialog
-          // pindah ke halaman lain
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => Listview(),
-              ));
-        },
-      ),
-    );
+        child: Column(
+      children: <Widget>[
+        RaisedButton(
+          color: Colors.deepOrange,
+          child: Text("Listview custom"),
+          elevation: 6.0,
+          onPressed: () {
+            //bookFlight(context); //call alertdialog
+            // pindah ke halaman Listview.dart
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Listview(),
+                ));
+          },
+        ),
+        RaisedButton(
+          color: Colors.deepPurple,
+          child: Text("LongList"),
+          elevation: 6.0,
+          onPressed: () {
+            //bookFlight(context); //call alertdialog
+            // pindah ke halaman Longlist.dart
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Longlist(),
+                ));
+          },
+        ),
+      ],
+    ));
   }
 }
 
